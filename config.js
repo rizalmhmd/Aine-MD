@@ -21,7 +21,8 @@ global.APIs = { // API Prefix
   melcanz: 'https://melcanz.com',
   pencarikode: 'https://pencarikode.xyz',
   LeysCoder: 'https://leyscoders-api.herokuapp.com',
-  restapi: 'https://x-restapi.herokuapp.com'
+  restapi: 'https://x-restapi.herokuapp.com',
+  males: 'https://malest.herokuapp.com'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
