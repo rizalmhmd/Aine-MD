@@ -10,5 +10,6 @@ handler.help = ['setwelcome <teks>']
 handler.tags = ['group']
 handler.command = /^(setwelcome|setw)$/i
 handler.group = true
+handler.admin = true
 
 module.exports = handler
