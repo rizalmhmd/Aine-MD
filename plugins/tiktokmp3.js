@@ -12,3 +12,6 @@ await conn.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'au
 handler.help = ['tiktokmp3' <url>']
 handler.tags = ['downloader']
 handler.command = /^tiktokmp3$/i
+
+
+module.exports = handler
