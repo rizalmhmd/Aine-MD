@@ -6,7 +6,7 @@ if (!res.ok) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
 let { caption, name, thumb_img, link_dl1, } = json.result
-await conn.sendFile(m.chat,  m)
+await conn.sendFile(m.chat, audio, m)
 }
 
 
