@@ -1,17 +1,18 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
 if (!args[0]) throw 'Uhm..url nya mana?'
-let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
+let res = await fetch(`https://api.xteam.xyz/dl/tiktok?url=${args[0]}&APIKEY=9db5a5373433c015`)
 if (!res.ok) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
-await conn.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
+let { caption, name, thumb_img, link_dl1, } = json.result
+await conn.sendFile(m.chat,  m)
+}
 
 
 
-handler.help = ['tiktokmp3' <url>']
+handler.help = ['tiktok <url>']
 handler.tags = ['downloader']
-handler.command = /^tiktokmp3$/i
-
+handler.command = /^tiktok$/i
 
 module.exports = handler
